@@ -1,0 +1,9 @@
+project: savantenvs/ngtcp2
+target: read_write_pkt
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/read_write_pkt/testsuite
+cmds:
+  - cmd: /mayhem/read_write_pkt
+    libfuzzer: true
+    timeout: 5

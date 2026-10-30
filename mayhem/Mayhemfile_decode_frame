@@ -1,0 +1,9 @@
+project: savantenvs/ngtcp2
+target: decode_frame
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/decode_frame/testsuite
+cmds:
+  - cmd: /mayhem/decode_frame
+    libfuzzer: true
+    timeout: 5

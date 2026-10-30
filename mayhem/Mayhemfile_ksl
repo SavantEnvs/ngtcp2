@@ -1,0 +1,9 @@
+project: savantenvs/ngtcp2
+target: ksl
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ksl/testsuite
+cmds:
+  - cmd: /mayhem/ksl
+    libfuzzer: true
+    timeout: 5

@@ -1,0 +1,9 @@
+project: savantenvs/ngtcp2
+target: rob
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/rob/testsuite
+cmds:
+  - cmd: /mayhem/rob
+    libfuzzer: true
+    timeout: 5
